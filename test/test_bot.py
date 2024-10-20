@@ -22,3 +22,11 @@ class TestBot(unittest.TestCase):
         b.position_on_cookie()
         #Assert
         self.assertTrue(pyautogui.position() == (250, 500) and b.get_display_size() == "Size(width=1920, height=1080)")
+
+    def test_click(self):
+        #Arrange
+        b = Bot()
+        #Act
+        isExecuted = b.click_cookie()
+        #Assert
+        self.assertTrue(isExecuted)

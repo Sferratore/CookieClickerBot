@@ -4,6 +4,7 @@ from Bot import Bot
 def main():
     b = Bot()
     b.position_on_cookie()
+    b.click_cookie()
 
 
 # Eseguire la funzione main solo se lo script viene eseguito direttamente

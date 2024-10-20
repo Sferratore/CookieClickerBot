@@ -10,3 +10,7 @@ class Bot:
             pyautogui.moveTo(250, 500, duration=1)
         else:
             raise ValueError("Your screen size is not supported by this software!")
+
+    def click_cookie(self):
+        pyautogui.click()
+        return True
