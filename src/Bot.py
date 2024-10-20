@@ -17,16 +17,17 @@ class Bot:
         return True
 
     def position_window(self):
-        windows = pygetwindow.getAllTitles()
-
+        windows = pygetwindow.getAllWindows()
         target_window = None
+
         for window in windows:
-            if window.title().endswith('Cookie Clicker - Google Chrome'):
-                print(window.title())
-                target_window = pygetwindow.getWindowsWithTitle(window.title())
+            if 'Cookie Clicker - Google Chrome' in window.title:
+                target_window = window
                 break
 
         if target_window:
+            if target_window.isMinimized:
+                target_window.restore()
             target_window.activate()
         else:
             raise Exception("Cookie Clicker window not found.")
