@@ -1,5 +1,5 @@
 import unittest
-
+import pygetwindow
 import pyautogui
 
 from Bot import Bot
@@ -30,3 +30,11 @@ class TestBot(unittest.TestCase):
         isExecuted = b.click_cookie()
         #Assert
         self.assertTrue(isExecuted)
+
+    def test_position_window(self):
+        # Arrange
+        b = Bot()
+        # Act
+        b.position_window()
+        # Assert
+        self.assertTrue(pygetwindow.getActiveWindow().endswith("Cookie Clicker - Google Chrome"))

@@ -1,4 +1,5 @@
 import pyautogui
+import pygetwindow
 
 class Bot:
 
@@ -14,3 +15,18 @@ class Bot:
     def click_cookie(self):
         pyautogui.click()
         return True
+
+    def position_window(self):
+        windows = pygetwindow.getAllTitles()
+
+        target_window = None
+        for window in windows:
+            if window.title().endswith('Cookie Clicker - Google Chrome'):
+                print(window.title())
+                target_window = pygetwindow.getWindowsWithTitle(window.title())
+                break
+
+        if target_window:
+            target_window.activate()
+        else:
+            raise Exception("Cookie Clicker window not found.")
