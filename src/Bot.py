@@ -1,5 +1,6 @@
 import pyautogui
 import pygetwindow
+import keyboard
 
 class Bot:
 
@@ -31,3 +32,12 @@ class Bot:
             target_window.activate()
         else:
             raise Exception("Cookie Clicker window not found.")
+
+
+    def execute_bot(self):
+        self.position_window()
+        self.position_on_cookie()
+        while True:
+            self.click_cookie()
+            if keyboard.is_pressed("esc"):
+                break

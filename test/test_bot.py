@@ -2,6 +2,7 @@ import unittest
 import pygetwindow
 import pyautogui
 import time
+import keyboard
 
 from Bot import Bot
 
@@ -41,4 +42,13 @@ class TestBot(unittest.TestCase):
         isExecuted = b.click_cookie()
         #Assert
         self.assertTrue(isExecuted)
+
+
+    def test_execute_bot(self):
+        # Arrange
+        b = Bot()
+        # Act
+        b.execute_bot()
+        #Assert
+        self.assertTrue(True)
 
