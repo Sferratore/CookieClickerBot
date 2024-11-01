@@ -1,4 +1,5 @@
 import unittest
+import random
 import pygetwindow
 import pyautogui
 import time
@@ -43,12 +44,25 @@ class TestBot(unittest.TestCase):
         #Assert
         self.assertTrue(isExecuted)
 
-
+    #Copia di execute_bot con inserimento della condizione di exit. Per eseguirlo correttamente CookieClicker deve essere aperto!
     def test_execute_bot(self):
-        # Arrange
+        #Arrange
         b = Bot()
-        # Act
-        b.execute_bot()
-        #Assert
-        self.assertTrue(True)
+        #Act
+        try:
+            b.position_window()
+            b.position_on_cookie()
+            i = 0
+            while True:
+                b.click_cookie()
+                i = i + 1
+                if i >= 10:
+                    break
+            self.assertTrue(True)
+        except Exception as e:
+            self.fail("Eccezione durante execute_bot: " + e)
+
+
+
+
 
