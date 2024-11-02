@@ -34,7 +34,7 @@ class Bot:
             raise Exception("Cookie Clicker window not found.")
 
 
-    async def execute_bot(self):
+    def execute_bot(self):
         self.position_window()
         self.position_on_cookie()
         while True:
