@@ -1,19 +1,19 @@
-# Descrizione
-CookieClickerBot è un bot sviluppato per automatizzare il gioco Cookie Clicker. Il bot clicca automaticamente sul biscotto.
-Questo programma è stato sviluppato utilizzando la metodologia TDD (Test Driven Development).
+# Description
+CookieClickerBot is a bot developed to automate the Cookie Clicker game. The bot clicks on the cookie.
+This program has been developed using TDD (Test Driven Development).
 
-# Requisiti
+# Requirements
 - Python 3.x
-- Librerie Python (elencate nel file requirements.txt, ma è possibile usare venv direttamente)
+- Python Libraries (listed in requirements.txt, but you can use venv as well)
 
-# Preparazione ambiente
-## Attivazione venv su Linux/macOS
+# Environment Setup
+## Activation venv on Linux/macOS
 source .venv/bin/activate
 
-## Attivazione venv su Windows
+## Activation venv on Windows
 .venv\Scripts\activate
 
-## Installazione requisiti (in alternativa ad attivazione venv)
+## Install requirements (alternative to venv use)
 ```
 pip install -r requirements.txt
 ```
