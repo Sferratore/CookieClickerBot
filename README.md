@@ -1,5 +1,5 @@
 # Description
-CookieClickerBot a bot developed to automate the Cookie Clicker game. The bot clicks on the cookie.
+CookieClickerBot is a bot developed to automate the Cookie Clicker game. The bot clicks on the cookie.
 This program has been developed using TDD (Test Driven Development).
 
 # Requirements
